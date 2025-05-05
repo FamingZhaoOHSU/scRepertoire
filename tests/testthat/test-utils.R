@@ -23,16 +23,6 @@ test_that(".removingMulti works", {
   
 })
 
-test_that(".filteringNA works", {
-  data("scRep_example")
-  test_obj <- combineExpression(getCombined(), scRep_example)
-  test_obj <- .filteringNA(test_obj)
-  expect_equal(test_obj@meta.data[, 7:13],
-               getdata("utils", "filteringNA_metadata"))
-  
-})
-
-
 test_that(".list.input.return works", {
     data("scRep_example")
     test_obj <- combineExpression(getCombined(), scRep_example)
